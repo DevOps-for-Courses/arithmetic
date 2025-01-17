@@ -1,0 +1,5 @@
+munit/
+
+*.o
+
+test_arithmetic
