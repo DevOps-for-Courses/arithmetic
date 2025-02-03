@@ -1,10 +1,12 @@
 LDFLAGS := -L munit
 LDLIBS := -lm
 
+arithmetic.o:
+
 test_arithmetic: arithmetic.o test_arithmetic.o munit/munit.o
 	$(CC) $(LDFLAGS) $(LDLIBS) -o $@ $^
 
-arithmetic.o: munit/munit.h
+test_arithmetic.o: munit/munit.h
 
 munit/munit.h:
 	git clone https://github.com/nemequ/munit.git munit
